@@ -37,3 +37,62 @@ public class identity_Matrix{
         }
     }
 }
+
+
+/*
+DRY RUN:
+
+Input:
+Rows = 3
+Columns = 3
+
+Matrix:
+1  0  0
+0  1  0
+0  0  1
+
+First condition:
+n == m
+3 == 3 → true
+So the matrix is eligible to be an Identity Matrix.
+
+identity_Mat(arr):
+
+i = 0
+    j = 0 → i == j → diagonal
+             arr[0][0] = 1 → correct → continue
+
+    j = 1 → i != j → non-diagonal
+             arr[0][1] = 0 → correct → continue
+
+    j = 2 → i != j → non-diagonal
+             arr[0][2] = 0 → correct → continue
+
+i = 1
+    j = 0 → i != j → non-diagonal
+             arr[1][0] = 0 → correct → continue
+
+    j = 1 → i == j → diagonal
+             arr[1][1] = 1 → correct → continue
+
+    j = 2 → i != j → non-diagonal
+             arr[1][2] = 0 → correct → continue
+
+i = 2
+    j = 0 → i != j → non-diagonal
+             arr[2][0] = 0 → correct → continue
+
+    j = 1 → i != j → non-diagonal
+             arr[2][1] = 0 → correct → continue
+
+    j = 2 → i == j → diagonal
+             arr[2][2] = 1 → correct → continue
+
+All elements are correct.
+No condition returned false.
+
+return true
+
+Output:
+Your matrix is an Identity matrix
+*/
